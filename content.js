@@ -95,7 +95,7 @@ window.portfolioContent = {
       period: "Mar – May 2024",
       summary: "A Flask web app that accepts research PDFs and helps readers understand technical papers through extracted keyphrases and contextual explanations.",
       details: "Combined term-frequency comparison and KeyBERT with GPT-3.5 definitions, incorporating figure information alongside the paper text.",
-      technologies: ["Flask", "KeyBERT", "OpenAI GPT-3.5", "PDF processing"],
+      technologies: ["Flask", "KeyBERT", "LLM", "PDF processing"],
       link: "https://github.com/espkz/caap"
     },
     {
@@ -104,7 +104,7 @@ window.portfolioContent = {
       period: "Nov – Dec 2023",
       summary: "A music information retrieval project that predicts Spotify genre tags from song lyrics, MIDI files, and audio features.",
       details: "Curated a dataset of 7,299 tracks with metadata, lyrics, MIDI files, and genre labels; compared multi-layer perceptron and random forest models.",
-      technologies: ["Python", "Music information retrieval", "MLP", "Random forest"],
+      technologies: ["Python", "Machine learning", "MLP", "Random forest"],
       link: "https://github.com/espkz/multimodal-genre-prediction"
     },
     {
