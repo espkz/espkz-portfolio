@@ -69,7 +69,7 @@ window.portfolioContent = {
       period: "Jan – May 2023",
       summary: "A web app that turns natural-language prompts into Spotify playlists using the OpenAI API.",
       technologies: ["Python", "React.js", "OpenAI"],
-      accent: "coral",
+      accent: "blue",
       link: ""
     },
     {
@@ -78,7 +78,7 @@ window.portfolioContent = {
       summary: "A retrieval-augmented chatbot for conversations with literary characters, grounded in story canon and each character’s perspective.",
       details: "Includes timeline-aware retrieval, character knowledge modeling, and automated evaluation pipelines to improve response consistency and quality.",
       technologies: ["Python", "Streamlit", "OpenAI API", "RAG"],
-      accent: "blue",
+      accent: "silver",
       link: ""
     }
   ],
