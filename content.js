@@ -58,6 +58,26 @@ window.portfolioContent = {
       ]
     },
     {
+      organization: "Emory University Goizueta Business School",
+      role: "NLP Research Assistant",
+      period: "Aug 2023 – May 2024",
+      location: "Atlanta, GA",
+      highlights: [
+        "Applied NLP techniques to analyze social and gender bias in large-scale news and media corpora by building Python-based pipelines to scrape, tokenize, and extract collocates",
+        "Conducted sentiment and dominance analysis using lexical scoring methods and NLP libraries to quantify affective tone in language"
+      ]
+    },
+    {
+      organization: "Emory University Goizueta Business School",
+      role: "Research Assistant - Financial Analytics",
+      period: "Jan 2023 – May 2024",
+      location: "Atlanta, GA",
+      highlights: [
+        "Audited investment research reports using Python, Selenium, and OpenAI for automated data collection, PDF analysis, and topic extraction",
+        "Performed topic modeling and frequency visualization for trend analysis"
+      ]
+    },
+    {
       organization: "Emory University School of Medicine",
       role: "XR Developer (Intern)",
       period: "Oct 2022 – May 2024",
@@ -70,14 +90,46 @@ window.portfolioContent = {
 
   projects: [
     {
+      name: "CAAP — Capture Assistant in Academic Papers",
+      category: "School",
+      period: "Mar – May 2024",
+      summary: "A Flask web app that accepts research PDFs and helps readers understand technical papers through extracted keyphrases and contextual explanations.",
+      details: "Combined term-frequency comparison and KeyBERT with GPT-3.5 definitions, incorporating figure information alongside the paper text.",
+      technologies: ["Flask", "KeyBERT", "OpenAI GPT-3.5", "PDF processing"],
+      link: "https://github.com/espkz/caap"
+    },
+    {
+      name: "Multimodal Genre Prediction",
+      category: "School",
+      period: "Nov – Dec 2023",
+      summary: "A music information retrieval project that predicts Spotify genre tags from song lyrics, MIDI files, and audio features.",
+      details: "Curated a dataset of 7,299 tracks with metadata, lyrics, MIDI files, and genre labels; compared multi-layer perceptron and random forest models.",
+      technologies: ["Python", "Music information retrieval", "MLP", "Random forest"],
+      link: "https://github.com/espkz/multimodal-genre-prediction"
+    },
+    {
       name: "Musaic",
+      category: "School",
       period: "Jan – May 2023",
       summary: "A web app that turns natural-language prompts into Spotify playlists using the OpenAI API.",
       technologies: ["Python", "React.js", "OpenAI"],
       link: "https://github.com/espkz/musaic-branch"
     },
     {
+      name: "Drane Lab Projects",
+      category: "Work",
+      period: "Oct 2023 – May 2024",
+      summary: "A collection of virtual reality and multimodal simulation projects completed with Emory School of Medicine.",
+      details: [
+        "Deja Vu VR: built spatially detailed Unity scenes for studying the déjà vu effect.",
+        "EMLT: built a two-dimensional platform for multimodal tasks."
+      ],
+      technologies: ["Unity", "C#", "Virtual reality", "Multimodal simulation"],
+      link: "https://github.com/espkz/dranelabprojects"
+    },
+    {
       name: "POVTales",
+      category: "Personal",
       period: "",
       summary: "A retrieval-augmented chatbot for conversations with literary characters, grounded in story canon and each character’s perspective.",
       details: "Includes timeline-aware retrieval, character knowledge modeling, and automated evaluation pipelines to improve response consistency and quality.",
@@ -110,6 +162,15 @@ window.portfolioContent = {
       venue: "Information",
       year: "2024",
       link: "https://www.mdpi.com/2078-2489/15/9/580"
+    },
+    {
+      title: "Emora Assistant Bot: Revolutionizing Task Automation and Chatbot Evaluation",
+      kind: "Honors thesis",
+      venue: "Emory University",
+      year: "2024",
+      recognition: "Highest Honors",
+      summary: "Developed a multi-user assistant for 17 administrative and classroom tasks using Emora’s State Transition Dialogue Manager and GPT-3.5 Turbo. Tests across two professor profiles and 20 student profiles yielded 94.3% average task-execution success and 94% natural-language understanding. The thesis also evaluated GPT-based simulation as an automated assessment method.",
+      link: "https://emorynlp.org/papers/theses/2024-honors-ellie-paek/"
     },
     {
       title: "Novel Memory Assessment Methods in Minimally Invasive Epilepsy Surgery",

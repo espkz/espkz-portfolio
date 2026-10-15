@@ -46,22 +46,40 @@
       </div>
     </article>`).join(""));
 
-  render("project-grid", data.projects.map((project) => {
+  const projectGroups = new Map();
+  data.projects.forEach((project) => {
+    const category = project.category || "Other";
+    if (!projectGroups.has(category)) projectGroups.set(category, []);
+    projectGroups.get(category).push(project);
+  });
+
+  const projectCards = (projects, category) => projects.map((project) => {
     const href = safeLink(project.link);
-    const title = href
-      ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${escapeHtml(project.name)} <span aria-hidden="true">↗</span></a>`
-      : escapeHtml(project.name);
     return `
-      <article class="project-card">
+      <article class="project-card" data-category="${escapeHtml(category)}">
         <div class="project-copy">
           ${project.period ? `<p class="project-period">${escapeHtml(project.period)}</p>` : ""}
-          <h2>${title}</h2>
+          <h3>${escapeHtml(project.name)}</h3>
           <p>${escapeHtml(project.summary)}</p>
-          ${project.details ? `<p class="project-detail">${escapeHtml(project.details)}</p>` : ""}
-          <ul class="tag-list">${project.technologies.map((tag) => `<li>${escapeHtml(tag)}</li>`).join("")}</ul>
+          ${Array.isArray(project.details)
+            ? `<ul class="project-detail-list">${project.details.map((detail) => `<li>${escapeHtml(detail)}</li>`).join("")}</ul>`
+            : project.details ? `<p class="project-detail">${escapeHtml(project.details)}</p>` : ""}
+          <div class="project-card-footer">
+            <ul class="tag-list">${project.technologies.map((tag) => `<li>${escapeHtml(tag)}</li>`).join("")}</ul>
+            ${href ? `<a class="project-link" href="${href}" target="_blank" rel="noopener noreferrer">GitHub repository <span aria-hidden="true">↗</span></a>` : ""}
+          </div>
         </div>
       </article>`;
-  }).join(""));
+  }).join("");
+
+  render("project-grid", [...projectGroups.entries()].map(([category, projects], index) => `
+    <section class="project-category" aria-labelledby="project-category-${index}">
+      <header class="project-category-heading">
+        <h2 id="project-category-${index}">${escapeHtml(category)}</h2>
+        <span>${projects.length} ${projects.length === 1 ? "project" : "projects"}</span>
+      </header>
+      <div class="project-grid">${projectCards(projects, category)}</div>
+    </section>`).join(""));
 
   render("publication-list", data.publications.map((publication) => {
     const href = safeLink(publication.link);
@@ -69,8 +87,16 @@
       ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${escapeHtml(publication.title)} <span aria-hidden="true">↗</span></a>`
       : escapeHtml(publication.title);
     return `
-      <article class="publication-item">
-        <div class="publication-main"><h2>${title}</h2><p>${escapeHtml(publication.venue)} <span aria-hidden="true">·</span> ${escapeHtml(publication.year)}</p></div>
+      <article class="publication-item${publication.kind ? " publication-item-featured" : ""}">
+        <div class="publication-main">
+          ${publication.kind || publication.recognition ? `<div class="publication-labels">
+            ${publication.kind ? `<span class="publication-kind">${escapeHtml(publication.kind)}</span>` : ""}
+            ${publication.recognition ? `<span class="publication-recognition">${escapeHtml(publication.recognition)}</span>` : ""}
+          </div>` : ""}
+          <h2>${title}</h2>
+          <p>${escapeHtml(publication.venue)} <span aria-hidden="true">·</span> ${escapeHtml(publication.year)}</p>
+          ${publication.summary ? `<p class="publication-summary">${escapeHtml(publication.summary)}</p>` : ""}
+        </div>
       </article>`;
   }).join(""));
 
