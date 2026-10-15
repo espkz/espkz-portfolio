@@ -14,11 +14,3 @@ Edit [`content.js`](content.js). The page reads its profile, experience, project
 - The phone number is not shown in the site contact links. The linked PDF is the original resume and still contains the phone number; replace it with a redacted copy later if you prefer.
 
 The resume link expects a PDF at `assets/ellie-paek-resume.pdf`. The deploy workflow copies only the files listed in its “Assemble static site” step, so the original resume PDF at the project root and the README are not published. If you add another static asset (such as a photo), add it to that step as well.
-
-## Publish with GitHub Pages
-
-1. Put these files in the root of a GitHub repository and push the `main` branch.
-2. In the repository, open **Settings → Pages** and choose **GitHub Actions** as the build and deployment source.
-3. The included workflow deploys the static site on each push to `main`. The first deployment appears under the repository's Pages settings.
-
-If your default branch has a different name, update `branches` in `.github/workflows/pages.yml` to match.
