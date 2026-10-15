@@ -79,7 +79,10 @@
       <div class="education-top"><h3>${escapeHtml(item.institution)}</h3><span>${escapeHtml(item.period)}</span></div>
       <p class="education-location">${escapeHtml(item.location)}</p>
       <ul class="degree-list">${item.degrees.map((degree) => `<li>${escapeHtml(degree)}</li>`).join("")}</ul>
-      ${item.detail ? `<p class="education-detail">${escapeHtml(item.detail)}</p>` : ""}
+      ${item.coursework || item.thesis ? `<dl class="education-details">
+        ${item.coursework ? `<div><dt>Relevant coursework</dt><dd>${escapeHtml(item.coursework)}</dd></div>` : ""}
+        ${item.thesis ? `<div><dt>Thesis</dt><dd>${escapeHtml(item.thesis)}</dd></div>` : ""}
+      </dl>` : ""}
     </article>`).join(""));
 
   render("skills-list", data.skills.map((group) => `

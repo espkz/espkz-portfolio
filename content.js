@@ -74,7 +74,7 @@ window.portfolioContent = {
       period: "Jan – May 2023",
       summary: "A web app that turns natural-language prompts into Spotify playlists using the OpenAI API.",
       technologies: ["Python", "React.js", "OpenAI"],
-      link: ""
+      link: "https://github.com/espkz/musaic-branch"
     },
     {
       name: "POVTales",
@@ -82,7 +82,7 @@ window.portfolioContent = {
       summary: "A retrieval-augmented chatbot for conversations with literary characters, grounded in story canon and each character’s perspective.",
       details: "Includes timeline-aware retrieval, character knowledge modeling, and automated evaluation pipelines to improve response consistency and quality.",
       technologies: ["Python", "Streamlit", "OpenAI API", "RAG"],
-      link: ""
+      link: "https://github.com/espkz/povtales"
     }
   ],
 
@@ -134,7 +134,8 @@ window.portfolioContent = {
         "B.S. in Mathematics and Computer Science, Highest Honors · GPA 3.95",
         "B.A. in Music, Vocal Performance"
       ],
-      detail: "Relevant coursework: Data Structures & Algorithms, Systems Programming, Machine Learning. Thesis: Emora Assistant Bot: Revolutionizing Task Automation and Chatbot Evaluation."
+      coursework: "Data Structures & Algorithms · Systems Programming · Machine Learning",
+      thesis: "Emora Assistant Bot: Revolutionizing Task Automation and Chatbot Evaluation"
     }
   ],
 

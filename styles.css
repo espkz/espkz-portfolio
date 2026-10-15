@@ -55,7 +55,10 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-ra
 .education-location { margin: 3px 0 0; color: var(--quiet); font-size: 12px; }
 .degree-list { display: grid; gap: 7px; margin: 14px 0 0; padding: 0; list-style: none; }
 .degree-list li { color: var(--muted); font-size: 12px; line-height: 1.55; }
-.education-detail { margin: 12px 0 0; color: var(--quiet); font-size: 11px; line-height: 1.65; }
+.education-details { display: grid; gap: 10px; margin: 16px 0 0; }
+.education-details > div { display: grid; grid-template-columns: 115px minmax(0, 1fr); gap: 12px; }
+.education-details dt { color: var(--quiet); font-size: 11px; }
+.education-details dd { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.6; }
 .skills-list { display: grid; gap: 13px; }
 .skill-group { display: grid; grid-template-columns: 135px minmax(0, 1fr); gap: 12px; }
 .skill-group h3 { margin: 1px 0 0; color: var(--quiet); font-size: 11px; font-weight: 500; }
@@ -132,6 +135,7 @@ a:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; border-ra
   .home-lede { font-size: 14px; }
   .resume-section { align-items: flex-start; flex-direction: column; gap: 13px; }
   .skill-group { grid-template-columns: 1fr; gap: 4px; }
+  .education-details > div { grid-template-columns: 1fr; gap: 2px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
