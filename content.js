@@ -8,7 +8,7 @@ window.portfolioContent = {
     introLabel: "Software engineer · AI researcher",
     intro: "I work on conversational AI, natural language processing, and interactive applications, with experience in both software engineering and research.",
     contact: [
-      { label: "Email", text: "ellie.s.paek@gmail.com", href: "mailto:ellie.s.paek@gmail.com" },
+      { label: "Email", text: "Email", href: "mailto:ellie.s.paek@gmail.com" },
       { label: "LinkedIn", text: "LinkedIn", href: "https://www.linkedin.com/in/elliepaek" },
       { label: "GitHub", text: "GitHub", href: "https://github.com/espkz" },
       { label: "Google Scholar", text: "Google Scholar", href: "https://scholar.google.com/citations?user=SEMB8uUAAAAJ" }
