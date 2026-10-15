@@ -81,18 +81,32 @@
       <div class="project-grid">${projectCards(projects, category)}</div>
     </section>`).join(""));
 
+  if (data.thesis) {
+    const href = safeLink(data.thesis.link);
+    const title = href
+      ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${escapeHtml(data.thesis.title)} <span aria-hidden="true">↗</span></a>`
+      : escapeHtml(data.thesis.title);
+    render("thesis-entry", `
+      <article class="thesis-card">
+        <div class="thesis-card-heading">
+          <div>
+            <h3>${title}</h3>
+            <p class="thesis-meta">${escapeHtml(data.thesis.venue)} <span aria-hidden="true">·</span> ${escapeHtml(data.thesis.year)}</p>
+          </div>
+          <span class="thesis-recognition">${escapeHtml(data.thesis.recognition)}</span>
+        </div>
+        <p class="thesis-summary">${escapeHtml(data.thesis.summary)}</p>
+      </article>`);
+  }
+
   render("publication-list", data.publications.map((publication) => {
     const href = safeLink(publication.link);
     const title = href
       ? `<a href="${href}" target="_blank" rel="noopener noreferrer">${escapeHtml(publication.title)} <span aria-hidden="true">↗</span></a>`
       : escapeHtml(publication.title);
     return `
-      <article class="publication-item${publication.kind ? " publication-item-featured" : ""}">
+      <article class="publication-item">
         <div class="publication-main">
-          ${publication.kind || publication.recognition ? `<div class="publication-labels">
-            ${publication.kind ? `<span class="publication-kind">${escapeHtml(publication.kind)}</span>` : ""}
-            ${publication.recognition ? `<span class="publication-recognition">${escapeHtml(publication.recognition)}</span>` : ""}
-          </div>` : ""}
           <h2>${title}</h2>
           <p>${escapeHtml(publication.venue)} <span aria-hidden="true">·</span> ${escapeHtml(publication.year)}</p>
           ${publication.summary ? `<p class="publication-summary">${escapeHtml(publication.summary)}</p>` : ""}

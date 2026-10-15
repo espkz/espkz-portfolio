@@ -138,6 +138,15 @@ window.portfolioContent = {
     }
   ],
 
+  thesis: {
+    title: "Emora Assistant Bot: Revolutionizing Task Automation and Chatbot Evaluation",
+    venue: "Emory University",
+    year: "2024",
+    recognition: "Highest Honors",
+    summary: "Developed a multi-user assistant for 17 administrative and classroom tasks using Emora’s State Transition Dialogue Manager and GPT-3.5 Turbo. Tests across two professor profiles and 20 student profiles yielded 94.3% average task-execution success and 94% natural-language understanding. The thesis also evaluated GPT-based simulation as an automated assessment method.",
+    link: "https://emorynlp.org/papers/theses/2024-honors-ellie-paek/"
+  },
+
   publications: [
     {
       title: "Why Are We Lonely? Leveraging LLMs to Measure and Understand Loneliness in Caregivers and Non-caregivers",
@@ -162,15 +171,6 @@ window.portfolioContent = {
       venue: "Information",
       year: "2024",
       link: "https://www.mdpi.com/2078-2489/15/9/580"
-    },
-    {
-      title: "Emora Assistant Bot: Revolutionizing Task Automation and Chatbot Evaluation",
-      kind: "Honors thesis",
-      venue: "Emory University",
-      year: "2024",
-      recognition: "Highest Honors",
-      summary: "Developed a multi-user assistant for 17 administrative and classroom tasks using Emora’s State Transition Dialogue Manager and GPT-3.5 Turbo. Tests across two professor profiles and 20 student profiles yielded 94.3% average task-execution success and 94% natural-language understanding. The thesis also evaluated GPT-based simulation as an automated assessment method.",
-      link: "https://emorynlp.org/papers/theses/2024-honors-ellie-paek/"
     },
     {
       title: "Novel Memory Assessment Methods in Minimally Invasive Epilepsy Surgery",
