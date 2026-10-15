@@ -6,21 +6,26 @@ window.portfolioContent = {
   profile: {
     name: "Ellie Paek",
     introLabel: "Software engineer · AI researcher",
-    intro: "I work across language, dialogue, and interactive systems — bringing research ideas into useful, human-centered tools.",
+    intro: "I work on conversational AI, natural language processing, and interactive applications, with experience in both software engineering and research.",
     contact: [
       { label: "Email", text: "ellie.s.paek@gmail.com", href: "mailto:ellie.s.paek@gmail.com" },
       { label: "LinkedIn", text: "LinkedIn", href: "https://www.linkedin.com/in/elliepaek" },
-      { label: "GitHub", text: "GitHub", href: "https://github.com/espkz" }
+      { label: "GitHub", text: "GitHub", href: "https://github.com/espkz" },
+      { label: "Google Scholar", text: "Google Scholar", href: "https://scholar.google.com/citations?user=SEMB8uUAAAAJ" }
     ]
   },
 
-  highlights: [
-    { value: "100+", label: "users in a speech-enabled AI roleplay study" },
-    { value: "91%", label: "feature accuracy for dialect-aware chatbots" },
-    { value: "90%", label: "less manual evaluation for a dialogue system" }
-  ],
-
   experience: [
+    {
+      organization: "Emory NLP Research Lab",
+      role: "Software Engineer",
+      period: "Sep 2026 – Current",
+      location: "Remote",
+      highlights: [
+        "Building a speech-enabled AI roleplay agent with Python, LangChain, and OpenAI APIs, integrating speech recognition and text-to-speech for 100+ users.",
+        "Developing a speech-based AI agent that documents and identifies dementia symptoms in patients."
+      ]
+    },
     {
       organization: "Emory University School of Nursing",
       role: "Software Engineer (Part-Time)",
@@ -69,7 +74,6 @@ window.portfolioContent = {
       period: "Jan – May 2023",
       summary: "A web app that turns natural-language prompts into Spotify playlists using the OpenAI API.",
       technologies: ["Python", "React.js", "OpenAI"],
-      accent: "blue",
       link: ""
     },
     {
@@ -78,29 +82,46 @@ window.portfolioContent = {
       summary: "A retrieval-augmented chatbot for conversations with literary characters, grounded in story canon and each character’s perspective.",
       details: "Includes timeline-aware retrieval, character knowledge modeling, and automated evaluation pipelines to improve response consistency and quality.",
       technologies: ["Python", "Streamlit", "OpenAI API", "RAG"],
-      accent: "silver",
       link: ""
     }
   ],
 
   publications: [
     {
-      title: "Finding A Voice: Evaluating African American Dialect Generation for Chatbot Technology",
+      title: "Why Are We Lonely? Leveraging LLMs to Measure and Understand Loneliness in Caregivers and Non-caregivers",
+      venue: "HeaLing",
+      year: "2026",
+      link: "https://aclanthology.org/2026.healing-1.19/"
+    },
+    {
+      title: "Finding A Voice: Exploring the Potential of African American Dialect and Voice Generation for Chatbots",
       venue: "ACL",
       year: "2025",
-      link: ""
+      link: "https://aclanthology.org/2025.acl-long.1252/"
     },
     {
       title: "Reference-Aligned Retrieval-Augmented Question Answering over Heterogeneous Proprietary Documents",
       venue: "CIKM · Applied Research Track",
       year: "2025",
-      link: ""
+      link: "https://dl.acm.org/doi/pdf/10.1145/3746252.3761566"
     },
     {
-      title: "Enhancing Task-Oriented Dialogue Systems through Synchronous Multi-Party Interaction",
+      title: "Enhancing Task-Oriented Dialogue Systems through Synchronous Multi-Party Interaction and Multi-Group Virtual Simulation",
       venue: "Information",
       year: "2024",
-      link: ""
+      link: "https://www.mdpi.com/2078-2489/15/9/580"
+    },
+    {
+      title: "Novel Memory Assessment Methods in Minimally Invasive Epilepsy Surgery",
+      venue: "Annual Review of Cybertherapy And Telemedicine",
+      year: "2024",
+      link: "https://www.researchgate.net/profile/Giuseppe-Riva-2/publication/387328695_ANNUAL_REVIEW_OF_CYBERTHERAPY_AND_TELEMEDICINE_2024/links/6780f78bfb021f2a47e59513/ANNUAL-REVIEW-OF-CYBERTHERAPY-AND-TELEMEDICINE-2024.pdf?field%5B%5D=author&criteria%5B%5D=Raquel+Torres-Luna#page=178"
+    },
+    {
+      title: "Leveraging Large Language Models for Automated Dialogue Analysis",
+      venue: "SIGDIAL",
+      year: "2023",
+      link: "https://aclanthology.org/2023.sigdial-1.20.pdf"
     }
   ],
 
